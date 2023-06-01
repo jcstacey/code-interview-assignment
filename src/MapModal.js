@@ -3,6 +3,7 @@ import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import Geocode from "react-geocode";
 import Modal from 'react-modal';
 import './MapModal.scss';
+import key  from './gcpKey.json';
 
 const customStyles = {
   content: {
@@ -14,19 +15,16 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
   },
 };
-
-// This should be dockerized, but for the assignment its here
-const gcApi = 'AIzaSyAgJoEjP9GMZxcYgRbo8SFy2cA4j2kmvKA';
 // Accessibility for the modal
 Modal.setAppElement(document.getElementById('root'));
 // Setting API key for reverse geocoding
-Geocode.setApiKey(gcApi);
+Geocode.setApiKey(key.gcApi);
 
 export default function MapModal({ order, closeModal, isOpen }) {
   const [originCoords, setOriginCoords] = useState({})
   const [shippingCoords, setShippingCoords] = useState({})
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: gcApi,
+    googleMapsApiKey: key.gcApi,
   });
 
   useEffect(() => {
