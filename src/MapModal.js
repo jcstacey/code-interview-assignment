@@ -19,7 +19,6 @@ const customStyles = {
 Modal.setAppElement(document.getElementById('root'));
 // Setting API key for reverse geocoding
 Geocode.setApiKey(key.gcApi);
-
 export default function MapModal({ order, closeModal, isOpen }) {
   const [originCoords, setOriginCoords] = useState({})
   const [shippingCoords, setShippingCoords] = useState({})
@@ -34,6 +33,7 @@ export default function MapModal({ order, closeModal, isOpen }) {
         setOriginCoords({ lat, lng })
       },
       (error) => {
+        console.log(error)
         console.error(error);
       }
     );

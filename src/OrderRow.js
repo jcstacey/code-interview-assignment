@@ -3,6 +3,7 @@ import './OrderRow.scss'
 import MapModal from "./MapModal"
 
 export const OrderRow = ({ order }) => {
+    
     const [modalIsOpen, setIsOpen] = React.useState(false);
     function closeModal() {
         setIsOpen(false);
@@ -16,7 +17,7 @@ export const OrderRow = ({ order }) => {
             <MapModal isOpen={modalIsOpen} closeModal={closeModal} order={order} />
             <div className="OrderRow__section">
                 <h4>Order: {order.id}</h4>
-                <div className="OrderRow__image"></div>
+                <div className="OrderRow__image"><img src={order.photo} alt="product"/></div>
             </div>
             <div className="OrderRow__section">
                 <div className="OrderRow__attribute"><label>Creation Date:</label> {order.created}</div>
