@@ -1,6 +1,11 @@
+## Coding Assignment given by BoxHub
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+Installs Node Module depedencies. Do this before starting
 
 ### `npm start`
 
