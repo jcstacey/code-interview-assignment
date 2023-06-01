@@ -1,0 +1,81 @@
+$border-radius: 10px;
+$spacing: 8px;
+
+.OrderRow {
+    display: flex;
+    width:50%;
+    min-width: 650px;
+    white-space: nowrap;
+    flex-direction: row;
+    flex: 1;
+    border: solid 2px #102f4564;
+    height: 180px;
+    border-radius: $border-radius;
+    padding:$spacing ($spacing*2);
+    margin: $spacing;
+
+    label {
+        margin: ($spacing*2.5) 0px;
+        font-weight: bold;
+    }
+
+    h4 {
+        margin: 0px;
+        padding: $spacing 0px;
+    }
+
+    &__button {
+        margin: $spacing 0px;
+        background-color: rgb(254 222 0) ;
+        font-weight: bold;
+        border: none;
+        padding: $spacing;
+        border-radius: $border-radius;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(254, 203, 0) ;
+        }
+    }
+
+    &__attribute {
+        margin:$spacing 0px;
+    }
+
+    &__section {
+        display:flex;
+        margin: 0px $spacing*2;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+    }
+
+    &__image {
+        height:140px;
+        width:140px;
+        background-color:  rgb(254 222 0);
+        border-radius: $border-radius;
+    }
+
+    &__status {
+        display: inline-block;
+        margin: $spacing;
+        font-weight: bold;
+        color: white;
+        padding: $spacing;
+        border-radius: $border-radius;
+        width: 100px;
+        background-color: black;
+        text-align: center;
+
+        &--delivered {
+            background-color: rgb(34, 157, 34);
+        }
+        &--pending {
+            background-color: rgb(196, 9, 9);
+        }
+        &--in-progress {
+            background-color: rgb(231, 154, 13);
+        }
+    }
+}

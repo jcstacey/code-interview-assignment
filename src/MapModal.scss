@@ -1,0 +1,25 @@
+$border-radius: 10px;
+$spacing: 8px;
+
+.MapModal {
+
+    &__map {
+        height: 500px;
+        width: 500px;
+    }
+
+    &__button {
+        margin: $spacing 0px;
+        width:100%;
+        background-color: rgb(254 222 0) ;
+        font-weight: bold;
+        border: none;
+        padding: $spacing;
+        border-radius: $border-radius;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(254, 203, 0) ;
+        }
+    }
+}
